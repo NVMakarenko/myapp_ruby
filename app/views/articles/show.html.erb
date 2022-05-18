@@ -1,0 +1,30 @@
+
+<h1><%= @article.title %></h1>
+
+<p><%= @article.body %></p>
+
+<p>State of product -
+  <%= @article.state ? 'new' : 'not new' %>
+
+      </p>
+<p>Price -
+  <%= if @article.price == 1 then 'free'
+        else 'for change'
+        end %></p>
+<p>How to get -
+  <%= if @article.location == 'send' then 'pay for the post'
+        else 'come and get'
+        end %></p>
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+<h2>Comments</h2>
+  <%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+  <%= render 'comments/form' %>

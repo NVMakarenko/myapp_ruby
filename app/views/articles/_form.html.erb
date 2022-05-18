@@ -1,0 +1,38 @@
+<%= form_with model: article do |form| %>
+  <div>
+    <%= form.label 'Name' %><br>
+    <%= form.text_field :title %>
+    <% article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label "About" %><br>
+    <%= form.text_area :body %>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= 'Description is too short. Write something more.' %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
+
+  <div>
+    <%= form.label "Way to give" %><br>
+    <%= form.select :location, ['send', 'meet'], selected: 'meet' %>
+  </div>
+  <div>
+    <%= form.label :state %><br>
+    <%= form.select :state, ['new', 'used'], selected: 'new' %>
+  </div>
+  <div>
+    <%= form.label :price %><br>
+    <%= form.select :price, ['free', 'change'], selected: 'change' %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

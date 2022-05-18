@@ -1,0 +1,13 @@
+<h1>Give and Get</h1>
+<p>Give what you want and Get what you need</p>
+
+<ul>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to "New Article", new_article_path %>
