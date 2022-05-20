@@ -1,0 +1,25 @@
+<%= form_with model: @page do |form| %>
+  <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+  </div>
+  <div>
+      <%= form.label :about %><br>
+      <%= form.text_field :about %>
+  </div>
+  <div>
+    <%= form.select :delivery, ['hand to hand','post'] %>
+  </div>
+  <div>
+      <%= form.select :state, ["free", "change"] %>
+  </div>
+  <div>
+      <% if @page.images.attached? %>
+        <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+      <% end %>
+      <%= form.file_field :images, multiple: true %>
+  </div>
+  <div>
+      <%= form.submit %>
+  </div>
+<% end %>

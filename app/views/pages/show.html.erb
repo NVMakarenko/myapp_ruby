@@ -1,0 +1,16 @@
+<h1>I want to GIVE</h1>
+
+
+    <h2><%= @page.title %></h2>
+<ul>
+    <li><%= @page.about %></li>
+    <li><%= @page.delivery %></li>
+    <li><%= @page.state %></li>
+</ul>
+
+  <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+
+<ul>
+<li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+<li><%= button_to "Destroy", @page, method: :delete %></li>
+</ul>
