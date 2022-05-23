@@ -1,0 +1,424 @@
+Started GET "/pages" for ::1 at 2022-05-23 13:58:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (148.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (203.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 473.7ms | Allocations: 6361)
+  Rendered layout layouts/application.html.erb (Duration: 2513.9ms | Allocations: 86512)
+Completed 500 Internal Server Error in 2944ms (ActiveRecord: 333.6ms | Allocations: 93446)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (D:/rails/myapp_ruby/tmp/cache/assets/sprockets/v4.0.0/Qs/QsVEnBp-Bkz-19SQiUB5jiWcemciLQWjfsUpo_wLuBM.cache.16940.10728.382898, D:/rails/myapp_ruby/tmp/cache/assets/sprockets/v4.0.0/Qs/QsVEnBp-Bkz-19SQiUB5jiWcemciLQWjfsUpo_wLuBM.cache)):
+  
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.0.3) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.0.3) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.0.3) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each_key'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each'
+sprockets (4.0.3) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.0.3) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/pages" for ::1 at 2022-05-23 14:05:42 +0300
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 543.9ms | Allocations: 3761)
+  Rendered layout layouts/application.html.erb (Duration: 16115.1ms | Allocations: 81029)
+Completed 200 OK in 16120ms (Views: 16116.5ms | ActiveRecord: 43.4ms | Allocations: 81412)
+
+
+Started GET "/pages/13" for ::1 at 2022-05-23 14:06:06 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (47.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (96.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 2451.1ms | Allocations: 15256)
+  Rendered layout layouts/application.html.erb (Duration: 2451.6ms | Allocations: 15358)
+Completed 500 Internal Server Error in 3282ms (ActiveRecord: 267.9ms | Allocations: 24982)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `attachment_url' for #<ActionView::Base:0x00000000008db8>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/13" for ::1 at 2022-05-23 14:06:58 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 847)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2250)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.6ms | Allocations: 3682)
+
+
+Started GET "/pages/7" for ::1 at 2022-05-23 14:07:03 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 456)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 1519)
+Completed 200 OK in 88ms (Views: 81.4ms | ActiveRecord: 0.7ms | Allocations: 2429)
+
+
+Started GET "/pages/new" for ::1 at 2022-05-23 14:07:07 +0300
+Processing by PagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/new.html.erb within layouts/application
+  Rendered pages/_form.html.erb (Duration: 2291.2ms | Allocations: 14896)
+  Rendered pages/new.html.erb within layouts/application (Duration: 2294.5ms | Allocations: 15163)
+  Rendered layout layouts/application.html.erb (Duration: 2304.0ms | Allocations: 16342)
+Completed 200 OK in 2312ms (Views: 2307.0ms | ActiveRecord: 0.0ms | Allocations: 16759)
+
+
+Started GET "/pages/13" for ::1 at 2022-05-23 14:07:14 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 495)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 1559)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 0.6ms | Allocations: 2492)
+
+
+Started DELETE "/pages/13" for ::1 at 2022-05-23 14:07:17 +0300
+Processing by PagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"13"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (73.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+  [1m[36mPage Destroy (0.7ms)[0m  [1m[31mDELETE FROM "pages" WHERE "pages"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Blob Load (110.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:40:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: fab85704-3dd8-452c-b456-84d39b4b7018) to Async(default) with arguments: #<GlobalID:0x0000023641c1b078 @uri=#<URI::GID gid://myapp/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/
+Completed 303 See Other in 2523ms (ActiveRecord: 209.8ms | Allocations: 19834)
+
+
+Started GET "/" for ::1 at 2022-05-23 14:07:20 +0300
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018] Performing ActiveStorage::PurgeJob (Job ID: fab85704-3dd8-452c-b456-84d39b4b7018) from Async(default) enqueued at 2022-05-23T11:07:19Z with arguments: #<GlobalID:0x000002364227b8a0 @uri=#<URI::GID gid://myapp/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mActiveStorage::Attachment Exists? (21.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mActiveStorage::VariantRecord Load (44.9ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mActiveStorage::Blob Destroy (167.5ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018]   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018] [36m  Disk Storage (7.0ms) [0m[31mDeleted file from key: aip4bvgi2ca87exrxz5sssw827nd[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018] [36m  Disk Storage (0.7ms) [0m[31mDeleted files by key prefix: variants/aip4bvgi2ca87exrxz5sssw827nd/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [fab85704-3dd8-452c-b456-84d39b4b7018] Performed ActiveStorage::PurgeJob (Job ID: fab85704-3dd8-452c-b456-84d39b4b7018) from Async(default) in 1196.02ms
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 810.4ms | Allocations: 5685)
+  Rendered layout layouts/application.html.erb (Duration: 819.9ms | Allocations: 7073)
+Completed 200 OK in 827ms (Views: 802.9ms | ActiveRecord: 18.2ms | Allocations: 7497)
+
+
+Started GET "/pages/new" for ::1 at 2022-05-23 14:07:36 +0300
+Processing by PagesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/new.html.erb within layouts/application
+  Rendered pages/_form.html.erb (Duration: 4.1ms | Allocations: 1453)
+  Rendered pages/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2614)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 2914)
+
+
+Started GET "/pages/2" for ::1 at 2022-05-23 14:12:13 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 447.9ms | Allocations: 5201)
+  Rendered layout layouts/application.html.erb (Duration: 448.9ms | Allocations: 5297)
+Completed 500 Internal Server Error in 474ms (ActiveRecord: 5.4ms | Allocations: 6658)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass
+
+            named_route = if model.persisted?
+                                  ^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/2" for ::1 at 2022-05-23 14:18:16 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPage Load (1.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 16.3ms | Allocations: 4728)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4818)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 39.6ms | Allocations: 8195)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass
+
+            named_route = if model.persisted?
+                                  ^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/2" for ::1 at 2022-05-23 14:26:57 +0300
+Started GET "/pages" for ::1 at 2022-05-23 14:26:57 +0300
+Started GET "/pages" for ::1 at 2022-05-23 14:26:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (57.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"2"}
+Processing by PagesController#index as HTML
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (4.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 634.1ms | Allocations: 11209)
+  Rendered layout layouts/application.html.erb (Duration: 655.8ms | Allocations: 11442)
+Completed 500 Internal Server Error in 2099ms (ActiveRecord: 26.1ms | Allocations: 26287)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass
+
+            named_route = if model.persisted?
+                                  ^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+  [1m[36mPage Load (2.0ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 1131.9ms | Allocations: 18545)
+  [1m[36mPage Load (1.9ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/index.html.erb:4
+  Rendered pages/index.html.erb within layouts/application (Duration: 1699.6ms | Allocations: 81936)
+  Rendered layout layouts/application.html.erb (Duration: 3829.9ms | Allocations: 298445)
+Completed 200 OK in 5272ms (Views: 4070.9ms | ActiveRecord: 41.5ms | Allocations: 312864)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 3964.7ms | Allocations: 307309)
+Completed 200 OK in 5362ms (Views: 4085.7ms | ActiveRecord: 135.6ms | Allocations: 321249)
+
+
+Started GET "/pages/15" for ::1 at 2022-05-23 14:27:17 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 105.7ms | Allocations: 8681)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 8782)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 11.5ms | Allocations: 9752)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `attachment_url' for #<ActionView::Base:0x00000000008d90>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/15" for ::1 at 2022-05-23 14:29:13 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 27.3ms | Allocations: 6275)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 6372)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.5ms | Allocations: 7793)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `attachment_url' for #<ActionView::Base:0x000000000091f0>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") if @page.images.attached? %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/15" for ::1 at 2022-05-23 14:34:39 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 23.0ms | Allocations: 5798)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 5888)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.3ms | Allocations: 6724)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `attachment_url' for #<ActionView::Base:0x00000000009560>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") if @page.images.attached? %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
+Started GET "/pages/15" for ::1 at 2022-05-23 14:36:22 +0300
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Page"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/pages/show.html.erb:11
+  Rendered pages/show.html.erb within layouts/application (Duration: 117.6ms | Allocations: 5799)
+  Rendered layout layouts/application.html.erb (Duration: 118.3ms | Allocations: 5889)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 1.5ms | Allocations: 6691)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `attachment_url' for #<ActionView::Base:0x000000000098f8>
+
+              recipient.public_send(method, *args)
+                       ^^^^^^^^^^^^):
+     8:     <li><%= @page.state %></li>
+     9: </ul>
+    10: 
+    11:   <%= image_tag(@page.images, style: "width: 250px; display: block") if @page.images.attached? %>
+    12: 
+    13: <ul>
+    14: <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
+  
+app/views/pages/show.html.erb:11
