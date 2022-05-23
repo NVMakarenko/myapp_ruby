@@ -33,6 +33,10 @@
     <%= form.select :price, ['free', 'change'], selected: 'change' %>
   </div>
   <div>
+    <%= form.label :image%>
+    <%= firm.file_file_field :image, accept: 'image/png, image/gif, image/jpeg' %>
+  </div>
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
