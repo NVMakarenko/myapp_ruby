@@ -8,6 +8,8 @@
     <li><%= @page.state %></li>
 </ul>
 
+  <%<%= image_tag(@page.images, style: "width: 250px; display: block") %> %>
+
 <ul>
 <li> <%= link_to "Edit", edit_page_path(@page) %> </li>
 <li><%= button_to "Destroy", @page, method: :delete %></li>
